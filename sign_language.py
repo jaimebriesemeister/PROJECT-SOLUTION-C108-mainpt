@@ -31,7 +31,7 @@ while True:
                 cv2.circle(img, (x,y), 15, (255, 0, 0), cv2.FILLED)
 
                 #escrevendo a condição para verificar se o dedo está dobrado, ou seja, verificar se o valor inicial da ponta do dedo é menor que a posição inicial do dedo que é o marco interno para o dedo indicador    
-                #se dedo estiver dobrado, mudanr a cor para verde
+                #se dedo estiver dobrado, mudar a cor para verde
                 if lm_list[tip].x < lm_list[tip - 3].x:
                     cv2.circle(img, (x,y), 15, (0, 255, 0), cv2.FILLED)
                     finger_fold_status.append(True)
@@ -60,5 +60,5 @@ while True:
             mp_draw.DrawingSpec((0,255,0),4,2))
     
 
-    cv2.imshow("detector de maos", img)
+    cv2.imshow("rastreador de maos", img)
     cv2.waitKey(1)
